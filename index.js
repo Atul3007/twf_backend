@@ -7,6 +7,10 @@ const PORT = process.env.PORT ;
 
 app.use(bodyParser.json());
 
+app.get('/',(req,res)=>{
+ res.status(200).json("Welcome to English to French translator app!!!")
+})
+
 app.post('/translate', (req, res) => {
   try {
     // Check if request body is in JSON format
